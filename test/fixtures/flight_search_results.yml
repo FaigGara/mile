@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flight_search_id: 1
+  price: MyString
+  out_departure_time: 2016-08-09
+  ot_arrival_time: 2016-08-09
+  agent: MyString
+  airline_company: MyString
+
+two:
+  flight_search_id: 1
+  price: MyString
+  out_departure_time: 2016-08-09
+  ot_arrival_time: 2016-08-09
+  agent: MyString
+  airline_company: MyString

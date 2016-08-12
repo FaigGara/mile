@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  source: MyString
+  outdate: 2016-08-09
+  from_location: MyString
+  to_location: MyString
+  result_url: MyString
+  taken: MyString
+
+two:
+  source: MyString
+  outdate: 2016-08-09
+  from_location: MyString
+  to_location: MyString
+  result_url: MyString
+  taken: MyString

@@ -1,0 +1,48 @@
+<% unless params[:from].blank? and params[:to].blank? and params[:outdate].blank? %>
+    <% @json.each_with_index do |json, counter| %>
+        <% if @json["Itineraries"][counter]["OutboundLegId"] == @json["Legs"][counter]["Id"] %> 
+                <div class="col-md 8 col-md-offset-1 panel panel-info "> 
+                    <div class="panel panel-heading">
+                        <h1 class="panel-title">
+                            <i class="fa fa-globe" aria-hidden="true">
+                            </i> GLOBAL 
+                                <i class="fa fa-plane" aria-hidden="true">
+                                </i> MILES 
+                        </h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h1><%= @json["Carriers"][counter]["Name"]%> --> <%= @json['Places'][0]["Name"] %> - <%= @json['Places'][0]["Code"] %> 
+                                <i class="fa fa-long-arrow-right fa-1x" aria-hidden="true"></i> 
+                                    <%= @json['Places'][1]["Name"] %> - <%= @json['Places'][1]["Code"] %>
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h3><b>Kalkış: <%=  @json["Legs"][counter]["Departure"] %> 
+                                Varış:<%= @json["Legs"][counter]["Arrival"] %>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h3> Agent: <%= @json["Agents"][counter]["Name"] %>
+                            </h3>
+                        </div> 
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h2 style="color:blue">Fiyat:   <%=  @json["Itineraries"][counter]["PricingOptions"][0]["Price"] %> 
+                                    <%= @json['Currencies'][0]["Code"] %>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+        <% end %>           
+    <% end -%>
+<% end -%>

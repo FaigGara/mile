@@ -1,0 +1,2 @@
+module GlobalMilesHelper
+end
